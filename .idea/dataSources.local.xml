@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails ToDoList: development" uuid="d2da54a4-8c84-4d46-bc89-e68418e8a9db">
-      <auth-required>false</auth-required>
+    <data-source name="Rails ToDoList: test" uuid="da9bd5ad-cfd0-47b9-9829-305872340c4c">
+      <user-name>username</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+    </data-source>
+    <data-source name="Rails ToDoList: production" uuid="ed22cbe0-8f19-4935-b4c8-3fc61d35031d">
+      <first-sync>true</first-sync>
+      <user-name>username</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+    </data-source>
+    <data-source name="Rails ToDoList: development" uuid="5deafc2e-52f1-4006-8477-af97339ea95a">
+      <user-name>username</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+      <schema-pattern>projectname_development.pg_catalog projectname_development.public</schema-pattern>
+      <default-schemas>projectname_development.public</default-schemas>
     </data-source>
   </component>
 </project>
