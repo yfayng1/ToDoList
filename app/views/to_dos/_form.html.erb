@@ -1,0 +1,55 @@
+<%= form_for @to_do, :html => { :class => "form-horizontal to_do" } do |f| %>
+
+  <% if @to_do.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@to_do.errors.count, "error") %> prohibited this to_do from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @to_do.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :task, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :task, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:task) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :due_date, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :due_date, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:due_date) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :due_time, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :due_time, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:due_time) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :priority, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :priority, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:priority) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                to_dos_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
